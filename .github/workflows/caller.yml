@@ -18,7 +18,11 @@ jobs:
       SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
 
-    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
+    - name: Run SonarQube workflow
       uses: Prasanna-source31/Reusable/.github/workflows/SonarQube.yml@main
-  
+      with:
+        username: ${{ github.event.inputs.username }}
