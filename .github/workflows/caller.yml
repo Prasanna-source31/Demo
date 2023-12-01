@@ -12,5 +12,7 @@ on:
 jobs:
   gitHub-actions-demo:
     uses: Prasanna-source31/Reusable/.github/workflows/SonarQube.yml@main
+    with:
+        username: ${{ github.event.inputs.username }}
   #github-actions-input-demo:
     #uses: amulyakashyap09/resuable-workflows/.github/workflows/manual-trigger-job.yml@main
