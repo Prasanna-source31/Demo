@@ -23,6 +23,6 @@ jobs:
         echo "SONAR_HOST_URL=${{ secrets.SONAR_HOST_URL }}" >> $GITHUB_ENV
 
     - name: Run SonarQube workflow
-      uses: Prasanna-source31/Reusable@main
+      uses: Prasanna-source31/Reusable/.github/workflows/SonarQube.yml@main
       with:
         username: ${{ github.event.inputs.username }}
