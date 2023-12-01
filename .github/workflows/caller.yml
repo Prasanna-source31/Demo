@@ -11,18 +11,6 @@ on:
 
 jobs:
   gitHub-actions-demo:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up SonarQube environment variables
-      run: |
-        echo "SONAR_TOKEN=${{ secrets.SONAR_TOKEN }}" >> $GITHUB_ENV
-        echo "SONAR_HOST_URL=${{ secrets.SONAR_HOST_URL }}" >> $GITHUB_ENV
-
-    - name: Run SonarQube workflow
-      uses: Prasanna-source31/Reusable/.github/workflows/SonarQube.yml@main
-      with:
-        username: ${{ github.event.inputs.username }}
+    uses: Prasanna-source31/Reusable/.github/workflows/SonarQube.yml@main
+  #github-actions-input-demo:
+    #uses: amulyakashyap09/resuable-workflows/.github/workflows/manual-trigger-job.yml@main
