@@ -14,13 +14,11 @@ jobs:
     uses: Prasanna-source31/Test/.github/workflows/SonarQube.yml@main
     with:
       username: Prasanna
+     
+    secrets:
+      token: ${{ secrets.TOKEN1 }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
-    secrets:
-      token: ${{ secrets.TOKEN1 }}
-      #SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      #SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      #TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
 
 
