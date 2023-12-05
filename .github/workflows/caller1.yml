@@ -11,7 +11,7 @@ on:
 
 jobs:
   call-workflow-A:
-    uses: Prasanna-source31/Reusable/.github/workflows/SonarQube.yml@main
+    uses: Prasanna-source31/Test/.github/workflows/SonarQube.yml@main
     with:
       username: Prasanna
     secrets:
