@@ -15,7 +15,7 @@ jobs:
     with:
       username: Prasanna
     secrets:
-      #token: ${{ secrets.TOKEN1 }}
+      token: ${{ secrets.TOKEN1 }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
