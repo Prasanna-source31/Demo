@@ -2,24 +2,19 @@ name: 080-resusable-workflow-caller
 
 on:
   push:
-    branches: none # [ main ]
+    branches: main
   pull_request:
-    branches: none # [ main ]
+    branches: main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   call-workflow-A:
-    uses: HoussemDellai/github-actions-course/.github/workflows/080-reusable-workflow-called.yml@main
+    uses: Prasanna-source31/Reusable/.github/workflows/SonarQube.yml@main
     with:
-      username: Houssem
+      username: Prasanna
     secrets:
-      token: ${{ secrets.TOKEN }}
+      token: ${{ secrets.TOKEN1 }}
 
-  call-workflow-B:
-    uses: HoussemDellai/github-actions-course/.github/workflows/080-reusable-workflow-called.yml@main
-    with:
-      username: Dellai
-    secrets:
-      token: ${{ secrets.TOKEN }}
+
